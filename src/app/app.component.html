@@ -26,5 +26,26 @@
       <td>{{ pokemon.name }}</td>
       <td>{{ pokemon.type }}</td>
     </tr>
+    <hr />
+    <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td
+        class="pokemon-td"
+        [style.backgroundColor]="pokemon.isStylisz ? '#800080' : ''"
+      >
+        {{ pokemon.id }}
+      </td>
+      <td>{{ pokemon.name }}</td>
+      <td>{{ pokemon.type }}</td>
+    </tr>
+    <tr *ngFor="let pokemon of pokemons; let i = index">
+      <td
+        class="pokemon-td"
+        [ngStyle]="{ backgroundColor: pokemon.isStylisz ? '#800080' : '' }"
+      >
+        {{ pokemon.id }}
+      </td>
+      <td>{{ pokemon.name }}</td>
+      <td>{{ pokemon.type }}</td>
+    </tr>
   </tbody>
 </table>
