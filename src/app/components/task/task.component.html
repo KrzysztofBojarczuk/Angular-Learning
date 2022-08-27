@@ -2,3 +2,18 @@
 
 <input type="text" #animal />
 <button (click)="handleClick(animal.value)">Click</button>
+<hr />
+
+<table>
+  <thead>
+    <th>Index</th>
+    <th>Name</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars; let i = index">
+      <td>{{ car.id }}</td>
+      <td>{{ car.name }}</td>
+    </tr>
+  </tbody>
+</table>
