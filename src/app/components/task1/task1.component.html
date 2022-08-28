@@ -1,11 +1,40 @@
 <p>task1 works!</p>
 
+<input type="text" [value]="firstName" (input)="handleChange($event)" />
+<p>{{firstName}}</p>
+
+<p>First example</p>
+<div *ngIf="!firstName">
+    No search results found
+</div>
+<p>Second exmaple</p>
+<ng-container *ngIf="firstName.length; then nameList; else noList">
+
+
+</ng-container>
+
+
+<ng-template #nameList>
+    <h1>All name list avialbe</h1>
+    ....
+</ng-template>
+
+<ng-template #noList>
+    <h1>No name avialbe</h1>
+</ng-template>
+
+
+
 
 <h1 *ngFor="let car of cars; let i = index">
 
 {{car.id}}
 
 </h1>
+
+<div *ngIf=""></div>
+
+<hr>
 
 <input type="text" #name />
 <button (click)="handleClick(name.value)">Add</button>

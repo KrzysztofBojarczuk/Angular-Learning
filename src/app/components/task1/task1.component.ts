@@ -14,6 +14,8 @@ interface Car {
 })
 export class Task1Component implements OnInit {
 
+  firstName: string = "";
+
   car: string ="BMW";
   constructor() { 
 
@@ -34,7 +36,9 @@ export class Task1Component implements OnInit {
     console.log(value);
 
   }
-  
+  handleChange(event: any){
+    this.firstName = event.target.value;
+  }
 
   ngOnInit(): void {
   }
