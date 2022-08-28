@@ -1,0 +1,17 @@
+<p>task1 works!</p>
+
+
+<h1 *ngFor="let car of cars; let i = index">
+
+{{car.id}}
+
+</h1>
+
+<input type="text" #name />
+<button (click)="handleClick(name.value)">Add</button>
+
+
+
+<input [(ngModel)]="car" />
+<h1>{{ car }}</h1>
+
