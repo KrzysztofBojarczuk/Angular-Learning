@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
+import { PokemonService } from '../services/pokemon.service';
 
 
 @Component({
@@ -10,32 +11,11 @@ import { Pokemon } from 'src/app/models/pokemon';
 export class PokemonListComponent implements OnInit {
 
 
-  pokemons: Pokemon[] = [
-    {
-      id: 1,
-      name: 'Mike',
-      type: 'electric',
-      isCool: false,
-      isStylisz: false,
-    },
-    {
-      id: 2,
-      name: 'Frank',
-      type: 'fire',
-      isCool: false,
-      isStylisz: false,
-    },
-    {
-      id: 3,
-      name: 'Garfield',
-      type: 'garfield',
-      isCool: true,
-      isStylisz: true,
-    },
-  ];
+  pokemons!: Pokemon[];
+  
 
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) { }
 
   handleRemove(event: Pokemon){
     this.pokemons = this.pokemons.filter((pokemons: Pokemon) => {
@@ -44,6 +24,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.pokemons = this.pokemonService.getPokemons();
   }
 
 }
