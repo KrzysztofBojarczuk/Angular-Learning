@@ -20,6 +20,14 @@
       (ngModelChange)="toggleIsCool($event)"
     />
   </label>
+
+  <label>
+    <input
+      type="checkbox"
+      name="acceptTerms"
+      [(ngModel)]="pokemon.acceptTerms"
+    />Accept Temrs?
+  </label>
 </form>
 
 <hr />
