@@ -8,9 +8,10 @@ import { ListComponent } from './components/list/list.component';
 import { Task1Component } from './components/task1/task1.component';
 import { PokemonBaseModule } from './pokemon-base/pokemon-base.module';
 import { PokemonListComponent } from './pokemon-base/pokemon-list/pokemon-list.component';
+import { PokemonTempalteFormComponent } from './pokemon-tempalte-form/pokemon-tempalte-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, Task1Component],
+  declarations: [AppComponent, ListComponent, Task1Component, PokemonTempalteFormComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule,PokemonBaseModule],
   providers: [],
   bootstrap: [AppComponent],
