@@ -11,6 +11,10 @@ export class PokemonTempalteFormComponent implements OnInit {
   pokemon!: Pokemon;
   constructor(private pokemonService: PokemonService) {}
 
+  toggleIsCool(object: any) {
+    console.log(object);
+  }
+
   getPokemon(id: number) {}
 
   ngOnInit(): void {
